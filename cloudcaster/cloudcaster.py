@@ -961,6 +961,8 @@ for confelb in conf['elbs']:
     elb = find_elb(myname, elbs)
 
     if elb != None:
+        time.sleep(0.2)
+        print "T"
         elb_attr = awselb.get_all_lb_attributes(elb.name)
 
         # if idle_timeout is not present in the elb config
